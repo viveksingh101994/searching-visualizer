@@ -13,7 +13,6 @@ class SearchVisualizer extends Component {
   }
 
   resetArray = () => {
-    console.log('sss');
     const array = [];
     for (let i = 0; i <= 30; i += 1) {
       array.push({
