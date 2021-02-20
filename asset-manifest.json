@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/searching-algorithm-visualizer/static/css/main.1db3e14d.chunk.css",
-    "main.js": "/searching-algorithm-visualizer/static/js/main.d01399c6.chunk.js",
-    "main.js.map": "/searching-algorithm-visualizer/static/js/main.d01399c6.chunk.js.map",
-    "runtime-main.js": "/searching-algorithm-visualizer/static/js/runtime-main.a918f44c.js",
-    "runtime-main.js.map": "/searching-algorithm-visualizer/static/js/runtime-main.a918f44c.js.map",
-    "static/js/2.43ededaa.chunk.js": "/searching-algorithm-visualizer/static/js/2.43ededaa.chunk.js",
-    "static/js/2.43ededaa.chunk.js.map": "/searching-algorithm-visualizer/static/js/2.43ededaa.chunk.js.map",
-    "static/js/3.ab7e7c4f.chunk.js": "/searching-algorithm-visualizer/static/js/3.ab7e7c4f.chunk.js",
-    "static/js/3.ab7e7c4f.chunk.js.map": "/searching-algorithm-visualizer/static/js/3.ab7e7c4f.chunk.js.map",
-    "index.html": "/searching-algorithm-visualizer/index.html",
-    "static/css/main.1db3e14d.chunk.css.map": "/searching-algorithm-visualizer/static/css/main.1db3e14d.chunk.css.map",
-    "static/js/2.43ededaa.chunk.js.LICENSE.txt": "/searching-algorithm-visualizer/static/js/2.43ededaa.chunk.js.LICENSE.txt"
+    "main.css": "/searching-visualizer/static/css/main.1db3e14d.chunk.css",
+    "main.js": "/searching-visualizer/static/js/main.d01399c6.chunk.js",
+    "main.js.map": "/searching-visualizer/static/js/main.d01399c6.chunk.js.map",
+    "runtime-main.js": "/searching-visualizer/static/js/runtime-main.bb871e56.js",
+    "runtime-main.js.map": "/searching-visualizer/static/js/runtime-main.bb871e56.js.map",
+    "static/js/2.43ededaa.chunk.js": "/searching-visualizer/static/js/2.43ededaa.chunk.js",
+    "static/js/2.43ededaa.chunk.js.map": "/searching-visualizer/static/js/2.43ededaa.chunk.js.map",
+    "static/js/3.ab7e7c4f.chunk.js": "/searching-visualizer/static/js/3.ab7e7c4f.chunk.js",
+    "static/js/3.ab7e7c4f.chunk.js.map": "/searching-visualizer/static/js/3.ab7e7c4f.chunk.js.map",
+    "index.html": "/searching-visualizer/index.html",
+    "static/css/main.1db3e14d.chunk.css.map": "/searching-visualizer/static/css/main.1db3e14d.chunk.css.map",
+    "static/js/2.43ededaa.chunk.js.LICENSE.txt": "/searching-visualizer/static/js/2.43ededaa.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a918f44c.js",
+    "static/js/runtime-main.bb871e56.js",
     "static/js/2.43ededaa.chunk.js",
     "static/css/main.1db3e14d.chunk.css",
     "static/js/main.d01399c6.chunk.js"
