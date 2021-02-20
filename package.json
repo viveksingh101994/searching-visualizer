@@ -1,6 +1,6 @@
 {
   "name": "searching-visualizer",
-  "homepage": "http://viveksingh101994.github.io/searching-algorithm-visualizer",
+  "homepage": "https://viveksingh101994.github.io/searching-visualizer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
