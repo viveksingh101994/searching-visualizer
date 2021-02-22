@@ -5,7 +5,7 @@ class SearchVisualizer extends Component {
   state = {
     array: [],
     algorithm: ['linear-search', 'binary-search'],
-    selectedAlgorithm: 1,
+    selectedAlgorithm: 0,
   };
 
   componentDidMount() {
