@@ -1,15 +1,27 @@
 import React, { Component } from 'react';
 import { randomNumberGenerator } from '../../utils/math';
 import './search-visualizer.css';
+import { connect } from 'react-redux';
+import { Algorithms } from '../../redux/algorithm-reducer/alogrithm-types';
 class SearchVisualizer extends Component {
   state = {
     array: [],
     algorithm: ['linear-search', 'binary-search'],
-    selectedAlgorithm: 0,
+    currentAlgo: '',
   };
 
   componentDidMount() {
+    this.setState({
+      currentAlgo: this.props.currentAlgo,
+    });
     this.resetArray();
+  }
+
+  componentDidUpdate() {
+    // this.setState({
+    //   currentAlgo: this.props.currentAlgo,
+    // });
+    // this.resetArray();
   }
 
   resetArray = () => {
@@ -21,8 +33,8 @@ class SearchVisualizer extends Component {
         result: false,
       });
     }
-    const { selectedAlgorithm } = this.state;
-    if (selectedAlgorithm === 1) {
+    const { currentAlgo } = this.state;
+    if (currentAlgo === Algorithms.binarySearch) {
       array.sort((a, b) => a.num - b.num);
     }
     this.setState({
@@ -166,4 +178,9 @@ class SearchVisualizer extends Component {
   }
 }
 
-export default SearchVisualizer;
+const mapStateToProp = ({ algorithm: { currentAlgo } }) => {
+  return {
+    currentAlgo,
+  };
+};
+export default connect(mapStateToProp, null)(SearchVisualizer);

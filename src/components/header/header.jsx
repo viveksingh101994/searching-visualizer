@@ -1,15 +1,31 @@
 import React from 'react';
-import SelectorComponent from '../selector/selector';
-import './header.css';
-const HeaderComponent = ({ algorithms }) => {
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { connect } from 'react-redux';
+import { setAlgo } from '../../redux/algorithm-reducer/algorithm-actions';
+const HeaderComponent = ({ algorithms, setAlgo }) => {
   return (
-    <div className="topnav" id="myTopnav">
-      <div className="active">Searching algo-visualizer</div>
-      <span style={{ float: 'right', overflow: 'hidden' }}>
-        <SelectorComponent items={algorithms}>Algorithm</SelectorComponent>
-      </span>
-    </div>
+    <Navbar bg="dark" variant="dark">
+      <Navbar.Brand href="#home">Searching Algo-visualizer</Navbar.Brand>
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+          <NavDropdown title="Select Algorithm" id="collasible-nav-dropdown">
+            {algorithms.map((val, idx) => (
+              <NavDropdown.Item key={idx} title={val} onClick={setAlgo}>
+                {val}
+              </NavDropdown.Item>
+            ))}
+          </NavDropdown>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
-export default HeaderComponent;
+
+
+const mapDispatchToPros = {
+  setAlgo: (e) => setAlgo(e.target.title),
+};
+
+export default connect(null, mapDispatchToPros)(HeaderComponent);
