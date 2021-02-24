@@ -20,24 +20,8 @@ export const binarySearch = async (array, elementToSearch, dispatch) => {
       dispatch(setItem(items, Algorithms.binarySearch));
       break;
     } else if (items[mid].num < parseInt(elementToSearch)) {
-      let startItem = { ...items[start] };
-      startItem.visited = true;
-      items[start] = startItem;
-      let endItem = { ...items[end] };
-      endItem.visited = true;
-      items[end] = endItem;
-      await timer(1000);
-      dispatch(setItem(items, Algorithms.binarySearch));
       start = mid + 1;
     } else {
-      let startItem = { ...items[start] };
-      startItem.visited = true;
-      items[start] = startItem;
-      let endItem = { ...items[end] };
-      endItem.visited = true;
-      items[end] = endItem;
-      await timer(1000);
-      dispatch(setItem(items, Algorithms.binarySearch));
       end = mid - 1;
     }
   }
