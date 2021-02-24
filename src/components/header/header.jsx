@@ -2,7 +2,7 @@ import React from 'react';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { connect } from 'react-redux';
-import { setAlgo } from '../../redux/algorithm-reducer/algorithm-actions';
+import { setAlgo } from '../../redux/algorithm-selector-reducer/algorithm-selector-actions';
 const HeaderComponent = ({ algorithms, setAlgo }) => {
   return (
     <Navbar bg="dark" variant="dark">
@@ -22,10 +22,8 @@ const HeaderComponent = ({ algorithms, setAlgo }) => {
   );
 };
 
-
-
-const mapDispatchToPros = {
-  setAlgo: (e) => setAlgo(e.target.title),
-};
+const mapDispatchToPros = () => (dispatch) => ({
+  setAlgo: (e) => dispatch(setAlgo(e.target.title)),
+});
 
 export default connect(null, mapDispatchToPros)(HeaderComponent);
