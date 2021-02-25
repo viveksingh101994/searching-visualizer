@@ -10,7 +10,7 @@ export const getElementsAsPerAlgorithm = (algorithm) => {
       result: false,
     });
   }
-  if (algorithm === Algorithms.binarySearch) {
+  if (algorithm === Algorithms.binarySearch||algorithm===Algorithms.jumpSearch) {
     array.sort((a, b) => a.num - b.num);
   }
   return array;

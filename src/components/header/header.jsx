@@ -3,7 +3,7 @@ import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { connect } from 'react-redux';
 import { setAlgo } from '../../redux/algorithm-selector-reducer/algorithm-selector-actions';
-const HeaderComponent = ({ algorithms, setAlgo }) => {
+const HeaderComponent = ({ algorithms, setAlgoDispatch }) => {
   return (
     <Navbar bg="dark" variant="dark">
       <Navbar.Brand href="#home">Searching Algo-visualizer</Navbar.Brand>
@@ -11,7 +11,7 @@ const HeaderComponent = ({ algorithms, setAlgo }) => {
         <Nav className="mr-auto">
           <NavDropdown title="Select Algorithm" id="collasible-nav-dropdown">
             {algorithms.map((val, idx) => (
-              <NavDropdown.Item key={idx} title={val} onClick={setAlgo}>
+              <NavDropdown.Item key={idx} title={val} onClick={setAlgoDispatch}>
                 {val}
               </NavDropdown.Item>
             ))}
@@ -23,7 +23,7 @@ const HeaderComponent = ({ algorithms, setAlgo }) => {
 };
 
 const mapDispatchToPros = () => (dispatch) => ({
-  setAlgo: (e) => dispatch(setAlgo(e.target.title)),
+  setAlgoDispatch: (e) => dispatch(setAlgo(e.target.title)),
 });
 
 export default connect(null, mapDispatchToPros)(HeaderComponent);

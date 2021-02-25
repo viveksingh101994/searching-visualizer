@@ -6,4 +6,5 @@ export const AlgorithmActionTypes = {
 export const Algorithms = {
   linearSearch: 'linear-search',
   binarySearch: 'binary-search',
+  jumpSearch: 'jump-search',
 };

@@ -6,7 +6,9 @@ import HeaderComponent from './components/header/header';
 function App() {
   return (
     <div className="App">
-      <HeaderComponent algorithms={['linear-search', 'binary-search']} />
+      <HeaderComponent
+        algorithms={['linear-search', 'binary-search', 'jump-search']}
+      />
       <SearchVisualizer />
     </div>
   );
