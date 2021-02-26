@@ -1,10 +1,10 @@
 export const ALGORITHMS_CONSTANTS = {
-  linearSearch: 'linear-search',
-  binarySearch: 'binary-search',
-  jumpSearch: 'jump-search',
-  interpolationSearch: 'interpolation-search',
-  fibonacciSearch: 'fibonacci-search',
-  exponentialSearch: 'exponential-search',
+  linearSearch: 'Linear search',
+  binarySearch: 'Binary search',
+  jumpSearch: 'Jump search',
+  interpolationSearch: 'Interpolation search',
+  exponentialSearch: 'Exponential search',
+  fibonacciSearch: 'Fibonacci search',
 };
 
 export const algorithms = () => {

@@ -6,9 +6,11 @@ Search visualizer is used for visualizing the searching algorithm used for findi
 
 - Searching Algorithms
   - Linear Search
-  - Binary Search ascending
+  - Binary Search
   - Jump Search
   - Interpolation Search
+  - Exponential Search
+  - Fibonacci Search
 
 ## Available Scripts
 
