@@ -2,18 +2,17 @@
 
 Search visualizer is used for visualizing the searching algorithm used for finding an element in an array.
 
-##Supported Algorithm
+## Supported Algorithm
 
-- Linear Search
-- Binary Search ascending
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Searching Algorithms
+  - Linear Search
+  - Binary Search ascending
+  - Jump Search
+  - Interpolation Search
 
 ## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
+In the project directory, you can run: `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

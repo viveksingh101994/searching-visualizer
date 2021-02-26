@@ -1,4 +1,4 @@
-import { Algorithms } from '../redux/algorithm-selector-reducer/alogrithm-selector-types';
+import { algorithms, ALGORITHMS_CONSTANTS } from '../constants/constant';
 import { randomNumberGenerator } from './math';
 
 export const getElementsAsPerAlgorithm = (algorithm) => {
@@ -10,7 +10,11 @@ export const getElementsAsPerAlgorithm = (algorithm) => {
       result: false,
     });
   }
-  if (algorithm === Algorithms.binarySearch||algorithm===Algorithms.jumpSearch) {
+  if (
+    algorithm === ALGORITHMS_CONSTANTS.binarySearch ||
+    algorithm === ALGORITHMS_CONSTANTS.jumpSearch ||
+    algorithm === ALGORITHMS_CONSTANTS.interpolationSearch
+  ) {
     array.sort((a, b) => a.num - b.num);
   }
   return array;

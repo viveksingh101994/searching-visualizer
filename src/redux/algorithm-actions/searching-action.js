@@ -3,7 +3,8 @@ import { Algorithms } from '../algorithm-selector-reducer/alogrithm-selector-typ
 import { binarySearch } from './binary-search-actions';
 import { jumpSearch } from './jump-search-actions';
 import { linearSearch } from './linear-search-actions';
-
+import { ALGORITHMS_CONSTANTS } from '../../constants/constant';
+import { interpolationSearch } from './interpolation-search.action';
 export const searchElement = (array, element, dispatch, type) => {
   let newArray = array.map((item) => ({
     num: item.num,
@@ -11,11 +12,13 @@ export const searchElement = (array, element, dispatch, type) => {
     result: false,
   }));
   dispatch(setItem(newArray, type));
-  if (type === Algorithms.linearSearch) {
+  if (type === ALGORITHMS_CONSTANTS.linearSearch) {
     linearSearch(newArray, element, dispatch);
-  } else if (type === Algorithms.binarySearch) {
+  } else if (type === ALGORITHMS_CONSTANTS.binarySearch) {
     binarySearch(newArray, element, dispatch);
-  } else if (type === Algorithms.jumpSearch) {
+  } else if (type === ALGORITHMS_CONSTANTS.jumpSearch) {
     jumpSearch(newArray, element, dispatch);
+  } else if (type === ALGORITHMS_CONSTANTS.interpolationSearch) {
+    interpolationSearch(newArray, element, dispatch);
   }
 };

@@ -1,6 +1,6 @@
+import { ALGORITHMS_CONSTANTS } from '../../constants/constant';
 import { timer } from '../../utils/utility';
 import { setItem } from '../algorithm-selector-reducer/algorithm-selector-actions';
-import { Algorithms } from '../algorithm-selector-reducer/alogrithm-selector-types';
 
 export const jumpSearch = async (array, elementToSearch, dispatch) => {
   let jumpingSize = Math.floor(Math.sqrt(array.length));
@@ -15,11 +15,11 @@ export const jumpSearch = async (array, elementToSearch, dispatch) => {
       result: false,
     };
     await timer(1000);
-    dispatch(setItem(array, Algorithms.jumpSearch));
+    dispatch(setItem(array, ALGORITHMS_CONSTANTS.jumpSearch));
     prev = jumpingSize;
     jumpingSize += Math.floor(Math.sqrt(array.length));
     if (prev >= jumpingSize) {
-      return dispatch(setItem(array, Algorithms.jumpSearch));
+      return dispatch(setItem(array, ALGORITHMS_CONSTANTS.jumpSearch));
     }
   }
 
@@ -30,11 +30,11 @@ export const jumpSearch = async (array, elementToSearch, dispatch) => {
       result: false,
     };
     await timer(1000);
-    dispatch(setItem(array, Algorithms.jumpSearch));
+    dispatch(setItem(array, ALGORITHMS_CONSTANTS.jumpSearch));
     prev++;
     if (prev === Math.min(jumpingSize, array.length)) {
       await timer(1000);
-      return dispatch(setItem(array, Algorithms.jumpSearch));
+      return dispatch(setItem(array, ALGORITHMS_CONSTANTS.jumpSearch));
     }
   }
 
@@ -46,5 +46,5 @@ export const jumpSearch = async (array, elementToSearch, dispatch) => {
     };
   }
   await timer(1000);
-  dispatch(setItem(array, Algorithms.jumpSearch));
+  dispatch(setItem(array, ALGORITHMS_CONSTANTS.jumpSearch));
 };

@@ -1,6 +1,6 @@
+import { ALGORITHMS_CONSTANTS } from '../../constants/constant';
 import { timer } from '../../utils/utility';
 import { setItem } from '../algorithm-selector-reducer/algorithm-selector-actions';
-import { Algorithms } from '../algorithm-selector-reducer/alogrithm-selector-types';
 
 export const linearSearch = async (array, elementToSearch, dispatch) => {
   for (let i = 0; i < array.length; i++) {
@@ -20,9 +20,9 @@ export const linearSearch = async (array, elementToSearch, dispatch) => {
     }
     await timer(1000);
 
-    dispatch(setItem(array, Algorithms.linearSearch));
+    dispatch(setItem(array, ALGORITHMS_CONSTANTS.linearSearch));
   }
   await timer(1000);
 
-  dispatch(setItem(array, Algorithms.linearSearch));
+  dispatch(setItem(array, ALGORITHMS_CONSTANTS.linearSearch));
 };

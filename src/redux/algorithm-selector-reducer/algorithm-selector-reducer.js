@@ -1,14 +1,14 @@
+import { ALGORITHMS_CONSTANTS } from '../../constants/constant';
 import { getElementsAsPerAlgorithm } from '../../utils/utility';
 import { AlgorithmActionTypes } from './alogrithm-selector-types';
 
 const INITIAL_STATE = {
-  currentAlgo: 'linear-search',
+  currentAlgo: ALGORITHMS_CONSTANTS.linearSearch,
   error: null,
   items: getElementsAsPerAlgorithm('linear-search'),
 };
 
 const algoReducer = (state = INITIAL_STATE, action) => {
-  console.log('action', action);
   switch (action.type) {
     case AlgorithmActionTypes.SET_BINARY_SEARCH:
     case AlgorithmActionTypes.SET_LINEAR_SEARCH:
