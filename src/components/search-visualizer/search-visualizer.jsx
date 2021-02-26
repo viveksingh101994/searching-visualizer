@@ -14,7 +14,6 @@ const getBackgroundElement = (visited, result) => {
 };
 
 const SearchVisualizer = ({ items, findElement, currentAlgo }) => {
-  console.log(items);
   return (
     <div>
       <div className="chart">
