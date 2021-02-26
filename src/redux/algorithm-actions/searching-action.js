@@ -6,6 +6,7 @@ import { linearSearch } from './linear-search-actions';
 import { ALGORITHMS_CONSTANTS } from '../../constants/constant';
 import { interpolationSearch } from './interpolation-search.action';
 import { exponentialSearch } from './exponenital-search-action';
+import { fibonacciSearch } from './fibonacci-search-actions';
 export const searchElement = (array, element, dispatch, type) => {
   let newArray = array.map((item) => ({
     num: item.num,
@@ -23,5 +24,7 @@ export const searchElement = (array, element, dispatch, type) => {
     interpolationSearch(newArray, element, dispatch);
   } else if (type === ALGORITHMS_CONSTANTS.exponentialSearch) {
     exponentialSearch(newArray, element, dispatch);
+  } else {
+    fibonacciSearch(newArray, element, dispatch);
   }
 };
