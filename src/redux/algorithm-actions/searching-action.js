@@ -5,6 +5,7 @@ import { jumpSearch } from './jump-search-actions';
 import { linearSearch } from './linear-search-actions';
 import { ALGORITHMS_CONSTANTS } from '../../constants/constant';
 import { interpolationSearch } from './interpolation-search.action';
+import { exponentialSearch } from './exponenital-search-action';
 export const searchElement = (array, element, dispatch, type) => {
   let newArray = array.map((item) => ({
     num: item.num,
@@ -20,5 +21,7 @@ export const searchElement = (array, element, dispatch, type) => {
     jumpSearch(newArray, element, dispatch);
   } else if (type === ALGORITHMS_CONSTANTS.interpolationSearch) {
     interpolationSearch(newArray, element, dispatch);
+  } else if (type === ALGORITHMS_CONSTANTS.exponentialSearch) {
+    exponentialSearch(newArray, element, dispatch);
   }
 };

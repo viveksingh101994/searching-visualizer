@@ -1,4 +1,4 @@
-import { algorithms, ALGORITHMS_CONSTANTS } from '../constants/constant';
+import { ALGORITHMS_CONSTANTS } from '../constants/constant';
 import { randomNumberGenerator } from './math';
 
 export const getElementsAsPerAlgorithm = (algorithm) => {
@@ -10,11 +10,7 @@ export const getElementsAsPerAlgorithm = (algorithm) => {
       result: false,
     });
   }
-  if (
-    algorithm === ALGORITHMS_CONSTANTS.binarySearch ||
-    algorithm === ALGORITHMS_CONSTANTS.jumpSearch ||
-    algorithm === ALGORITHMS_CONSTANTS.interpolationSearch
-  ) {
+  if (algorithm !== ALGORITHMS_CONSTANTS.linearSearch) {
     array.sort((a, b) => a.num - b.num);
   }
   return array;
