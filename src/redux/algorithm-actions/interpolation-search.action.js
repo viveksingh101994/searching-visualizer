@@ -33,7 +33,6 @@ export const interpolationSearch = async (array, elementToSearch, dispatch) => {
       await timer(1000);
       return dispatch(setItem(array, ALGORITHMS_CONSTANTS.interpolationSearch));
     }
-    debugger;
     let pos = Math.floor(
       low +
         ((high - low) / (array[high].num - array[low].num)) *
