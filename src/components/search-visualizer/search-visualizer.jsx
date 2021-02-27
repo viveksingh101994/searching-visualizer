@@ -15,27 +15,25 @@ const getBackgroundElement = (visited, result) => {
 
 const SearchVisualizer = ({ items, findElement, currentAlgo }) => {
   return (
-    <div>
-      <div className="chart">
-        {items.map(({ num, visited, result }, idx) => {
-          const backgroundColor = getBackgroundElement(visited, result);
-          return (
-            <div
-              key={idx}
-              className="bar"
-              title={num}
-              style={{
-                height: `${num}px`,
-                backgroundColor,
-                cursor: 'pointer',
-              }}
-              onClick={(e) => findElement(e.target.title, items, currentAlgo)}
-            >
-              {num}
-            </div>
-          );
-        })}
-      </div>
+    <div className="chart">
+      {items.map(({ num, visited, result }, idx) => {
+        const backgroundColor = getBackgroundElement(visited, result);
+        return (
+          <div
+            key={idx}
+            className="bar transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+            title={num}
+            style={{
+              height: `${num}px`,
+              backgroundColor,
+              cursor: 'pointer',
+            }}
+            onClick={(e) => findElement(e.target.title, items, currentAlgo)}
+          >
+            {num}
+          </div>
+        );
+      })}
     </div>
   );
 };
