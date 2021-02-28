@@ -2,6 +2,7 @@ import React from 'react';
 import './search-visualizer.css';
 import { connect } from 'react-redux';
 import { searchElement } from '../../redux/algorithm-actions/searching-action';
+import BarComponent from '../bar/bar';
 
 const getBackgroundElement = (visited, result) => {
   if (visited && result) {
@@ -19,19 +20,15 @@ const SearchVisualizer = ({ items, findElement, currentAlgo }) => {
       {items.map(({ num, visited, result }, idx) => {
         const backgroundColor = getBackgroundElement(visited, result);
         return (
-          <div
+          <BarComponent
             key={idx}
-            className="bar transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
             title={num}
-            style={{
-              height: `${num}px`,
-              backgroundColor,
-              cursor: 'pointer',
-            }}
+            height={num}
+            backgroundColor={backgroundColor}
             onClick={(e) => findElement(e.target.title, items, currentAlgo)}
           >
             {num}
-          </div>
+          </BarComponent>
         );
       })}
     </div>

@@ -14,14 +14,14 @@
   font-weight: 100;
   display: inline-block;
   color: transparent;
-  transition: background-color 0.5s ease;
+  animation: up1 3s ease-in;
 }
 
-.tooltip {
-  visibility: hidden;
-  position: absolute;
-}
-.has-tooltip:hover .tooltip {
-  visibility: visible;
-  z-index: 100;
+@keyframes up1 {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
 }

@@ -38,10 +38,10 @@ export const fibonacciSearch = async (array, elementToSearch, dispatch) => {
         result: true,
       };
       await timer(1000);
-      return dispatch(setItem(array, ALGORITHMS_CONSTANTS.linearSearch));
+      return dispatch(setItem(array, ALGORITHMS_CONSTANTS.fibonacciSearch));
     }
     await timer(1000);
-    dispatch(setItem(array, ALGORITHMS_CONSTANTS.linearSearch));
+    dispatch(setItem(array, ALGORITHMS_CONSTANTS.fibonacciSearch));
   }
 
   if (fibMMm1 && array[offset + 1].num === elementToSearch) {
@@ -51,8 +51,8 @@ export const fibonacciSearch = async (array, elementToSearch, dispatch) => {
       result: true,
     };
     await timer(1000);
-    return dispatch(setItem(array, ALGORITHMS_CONSTANTS.linearSearch));
+    return dispatch(setItem(array, ALGORITHMS_CONSTANTS.fibonacciSearch));
   }
 
-  dispatch(setItem(array, ALGORITHMS_CONSTANTS.linearSearch));
+  dispatch(setItem(array, ALGORITHMS_CONSTANTS.fibonacciSearch));
 };
