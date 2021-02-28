@@ -6,6 +6,7 @@ const INITIAL_STATE = {
   currentAlgo: ALGORITHMS_CONSTANTS.linearSearch,
   error: null,
   items: getElementsAsPerAlgorithm('linear-search'),
+  isRunning: 0,
 };
 
 const algoReducer = (state = INITIAL_STATE, action) => {
@@ -16,6 +17,7 @@ const algoReducer = (state = INITIAL_STATE, action) => {
         ...state,
         items: action.payload.items,
         currentAlgo: action.payload.currentAlgo,
+        isRunning: action.payload.isRunning,
         error: null,
       };
     default:

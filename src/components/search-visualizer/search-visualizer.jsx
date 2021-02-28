@@ -1,5 +1,4 @@
 import React from 'react';
-import './search-visualizer.css';
 import { connect } from 'react-redux';
 import { searchElement } from '../../redux/algorithm-actions/searching-action';
 import BarComponent from '../bar/bar';
@@ -15,8 +14,9 @@ const getBackgroundElement = (visited, result) => {
 };
 
 const SearchVisualizer = ({ items, findElement, currentAlgo }) => {
+  const classChart = `grid grid-cols-${items.length - 1} gap-2`;
   return (
-    <div className="chart">
+    <div className={classChart}>
       {items.map(({ num, visited, result }, idx) => {
         const backgroundColor = getBackgroundElement(visited, result);
         return (

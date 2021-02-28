@@ -7,6 +7,7 @@ export const setAlgo = (content) => {
     payload: {
       items: getElementsAsPerAlgorithm(content),
       currentAlgo: content,
+      isRunning: 0,
     },
   };
 };
@@ -17,6 +18,17 @@ export const setItem = (content, currentAlgo) => {
     payload: {
       items: [...content],
       currentAlgo: currentAlgo,
+      isRunning: setIsRunningStatus(content),
     },
   };
+};
+
+const setIsRunningStatus = (elements) => {
+  if (elements.every((x) => !x.result && !x.visited)) {
+    return 0;
+  } else if (elements.some((x) => x.result)) {
+    return 1;
+  } else if (elements.some((x) => x.visited)) {
+    return -1;
+  }
 };

@@ -8,7 +8,7 @@ const increasingHeightKeyFrame = (height) => keyframes`
 
 const Bar = styled.div`
   grid-row-start: 1;
-  grid-row-end: 101;
+  grid-row-end: 75;
   border-radius: 5px 5px 5px 5px;
   padding-top: 7px;
   font-family: sans-serif;
@@ -22,7 +22,7 @@ const Bar = styled.div`
   cursor: pointer;
 `;
 
-const BarComponent = ({ title, height, backgroundColor, onClick }) => {
+const BarComponent = ({ title, height, backgroundColor, onClick, ...s }) => {
   return (
     <Bar
       className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"

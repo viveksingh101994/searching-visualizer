@@ -1,6 +1,0 @@
-.chart {
-  display: grid;
-  grid-template-rows: repeat(100, 1fr);
-  grid-column-gap: 5px;
-  padding: 10px;
-}
