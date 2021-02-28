@@ -1,7 +1,12 @@
 import { ALGORITHMS_CONSTANTS } from '../../constants/constant';
 import { timer } from '../../utils/utility';
 import { setItem } from '../algorithm-selector-reducer/algorithm-selector-actions';
-export const fibonacciSearch = async (array, elementToSearch, dispatch) => {
+export const fibonacciSearch = async (
+  array,
+  elementToSearch,
+  dispatch,
+  operationSpeed
+) => {
   elementToSearch = parseInt(elementToSearch);
   let fibMMm2 = 0;
   let fibMMm1 = 1;
@@ -37,10 +42,10 @@ export const fibonacciSearch = async (array, elementToSearch, dispatch) => {
         visited: true,
         result: true,
       };
-      await timer(1000);
+      await timer(operationSpeed);
       return dispatch(setItem(array, ALGORITHMS_CONSTANTS.fibonacciSearch));
     }
-    await timer(1000);
+    await timer(operationSpeed);
     dispatch(setItem(array, ALGORITHMS_CONSTANTS.fibonacciSearch));
   }
 
@@ -50,7 +55,7 @@ export const fibonacciSearch = async (array, elementToSearch, dispatch) => {
       visited: true,
       result: true,
     };
-    await timer(1000);
+    await timer(operationSpeed);
     return dispatch(setItem(array, ALGORITHMS_CONSTANTS.fibonacciSearch));
   }
 

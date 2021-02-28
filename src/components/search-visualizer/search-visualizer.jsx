@@ -13,8 +13,14 @@ const getBackgroundElement = (visited, result) => {
   return '#181e54';
 };
 
-const SearchVisualizer = ({ items, findElement, currentAlgo }) => {
-  const classChart = `grid grid-cols-${items.length - 1} gap-2`;
+const SearchVisualizer = ({
+  items,
+  findElement,
+  currentAlgo,
+  arrayLength,
+  operationSpeed,
+}) => {
+  const classChart = `grid grid-cols-${arrayLength.length - 1} gap-2`;
   return (
     <div className={classChart}>
       {items.map(({ num, visited, result }, idx) => {
@@ -25,7 +31,9 @@ const SearchVisualizer = ({ items, findElement, currentAlgo }) => {
             title={num}
             height={num}
             backgroundColor={backgroundColor}
-            onClick={(e) => findElement(e.target.title, items, currentAlgo)}
+            onClick={(e) =>
+              findElement(e.target.title, items, currentAlgo, operationSpeed)
+            }
           >
             {num}
           </BarComponent>
@@ -35,15 +43,20 @@ const SearchVisualizer = ({ items, findElement, currentAlgo }) => {
   );
 };
 
-const mapStateToProp = ({ algorithm: { currentAlgo, items } }) => {
+const mapStateToProp = ({
+  algorithm: { currentAlgo, items },
+  operation: { arrayLength, operationSpeed },
+}) => {
   return {
     currentAlgo,
     items,
+    arrayLength,
+    operationSpeed,
   };
 };
 
 const mapDispatchToPros = () => (dispatch) => ({
-  findElement: async (element, arr, currentAlgo) =>
-    await searchElement(arr, element, dispatch, currentAlgo),
+  findElement: async (element, arr, currentAlgo, operationSpeed) =>
+    await searchElement(arr, element, dispatch, currentAlgo, operationSpeed),
 });
 export default connect(mapStateToProp, mapDispatchToPros)(SearchVisualizer);

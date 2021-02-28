@@ -1,6 +1,6 @@
 import { ALGORITHMS_CONSTANTS } from '../../constants/constant';
 import { getElementsAsPerAlgorithm } from '../../utils/utility';
-import { AlgorithmActionTypes } from './alogrithm-selector-types';
+import { AlgorithmActionTypes } from './algorithm-selector-types';
 
 const INITIAL_STATE = {
   currentAlgo: ALGORITHMS_CONSTANTS.linearSearch,

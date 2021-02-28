@@ -1,5 +1,5 @@
 import { getElementsAsPerAlgorithm } from '../../utils/utility';
-import { AlgorithmActionTypes } from './alogrithm-selector-types';
+import { AlgorithmActionTypes } from './algorithm-selector-types';
 
 export const setAlgo = (content) => {
   return {

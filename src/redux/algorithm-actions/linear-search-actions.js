@@ -2,7 +2,12 @@ import { ALGORITHMS_CONSTANTS } from '../../constants/constant';
 import { timer } from '../../utils/utility';
 import { setItem } from '../algorithm-selector-reducer/algorithm-selector-actions';
 
-export const linearSearch = async (array, elementToSearch, dispatch) => {
+export const linearSearch = async (
+  array,
+  elementToSearch,
+  dispatch,
+  operationSpeed
+) => {
   for (let i = 0; i < array.length; i++) {
     if (parseInt(elementToSearch) === array[i].num) {
       array[i] = {
@@ -18,11 +23,11 @@ export const linearSearch = async (array, elementToSearch, dispatch) => {
         result: false,
       };
     }
-    await timer(1000);
+    await timer(operationSpeed);
 
     dispatch(setItem(array, ALGORITHMS_CONSTANTS.linearSearch));
   }
-  await timer(1000);
+  await timer(operationSpeed);
 
   dispatch(setItem(array, ALGORITHMS_CONSTANTS.linearSearch));
 };
