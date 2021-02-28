@@ -44,8 +44,7 @@ async function binarySearch(
   operationSpeed
 ) {
   if (right >= left) {
-    let mid = left + (right - left) / 2;
-
+    let mid = Math.floor(left + (right - left) / 2);
     array[mid] = {
       num: array[mid].num,
       visited: true,

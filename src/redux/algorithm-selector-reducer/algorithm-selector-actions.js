@@ -1,11 +1,11 @@
 import { getElementsAsPerAlgorithm } from '../../utils/utility';
 import { AlgorithmActionTypes } from './algorithm-selector-types';
 
-export const setAlgo = (content) => {
+export const setAlgo = (content, arrayLength) => {
   return {
     type: AlgorithmActionTypes.SET_LINEAR_SEARCH,
     payload: {
-      items: getElementsAsPerAlgorithm(content),
+      items: getElementsAsPerAlgorithm(content, arrayLength),
       currentAlgo: content,
       isRunning: 0,
     },
